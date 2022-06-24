@@ -1,33 +1,20 @@
 // import logger from "./logger.js";
 
-let animals = new Set();
-
-// add new animal
-animals.add("tiger");
-animals.add("cat");
-animals.add("elephant");
-animals.add("lion");
-animals.add("bird");
-animals.add("monkey");
-
-console.log(animals);
+let birds = [
+    {"ID": "DV8", "Name": "Eurasian Collared-Dove", "Type": "Dove" },
+    {"ID": "HK12", "Name": "Bald Eagle", "Type": "Hawk" },
+    {"ID": "HK6", "Name": "Cooper's Hawk", "Type": "Hawk" },
+    {"ID": "SP11", "Name": "Bell's Sparrow", "Type": "Sparrow" },
+    {"ID": "DV2", "Name": "Mourning Dove", "Type": "Dove" }
+];
 
 
-// check animal in list
-var checkAnimal = (item) => {
-    if(animals.has(item)) {
-        console.log("There is a " + item);
-    }else {
-        console.log("There isn't " + item);
-    }
-}
+const idBirds = [];
 
-checkAnimal("tiger");
-checkAnimal("dog");
+birds.forEach((bird) => {
+    idBirds.push({
+        id: bird.ID
+    })
+})
 
-
-//  remove animal
-
-animals.delete("tiger");
-
-console.log(animals);
+console.log(idBirds);
