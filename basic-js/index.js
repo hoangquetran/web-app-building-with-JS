@@ -1,33 +1,24 @@
 // import logger from "./logger.js";
 
-let animals = new Set();
-
-// add new animal
-animals.add("tiger");
-animals.add("cat");
-animals.add("elephant");
-animals.add("lion");
-animals.add("bird");
-animals.add("monkey");
-
-console.log(animals);
-
-
-// check animal in list
-var checkAnimal = (item) => {
-    if(animals.has(item)) {
-        console.log("There is a " + item);
-    }else {
-        console.log("There isn't " + item);
+class Infor {
+    constructor(name, desc) {
+        this.name = name;
+        this.desc = desc;
     }
+
+    static calculate = (a = 1) => {
+        return a*3;
+    }
+    
 }
 
-checkAnimal("tiger");
-checkAnimal("dog");
+let infor = Infor.calculate();
 
+console.log(infor);
 
-//  remove animal
-
-animals.delete("tiger");
-
-console.log(animals);
+class geometry extends Infor {
+    constructor(length, descGeometry) {
+        this.length = length;
+        this.descGeometry = descGeometry;
+    }
+}
